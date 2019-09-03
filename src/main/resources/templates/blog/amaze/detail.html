@@ -197,7 +197,6 @@
 <script th:src="@{/blog/plugins/highlight/highlight.pack.js}"></script>
 <script th:src="@{/blog/plugins/comment/valid.js}"></script>
 <script th:src="@{/blog/plugins/comment/comment.js}"></script>
-<script rel="stylesheet" th:src="@{/blog/amaze/js/marked.min.js}"></script>
 <!-- sweetalert -->
 <script th:src="@{/admin/plugins/sweetalert/sweetalert.min.js}"></script>
 <script>
@@ -223,8 +222,6 @@
         });
 
         $('article h1, article h2, article h3, article h4, article h5').find('a').removeAttr('target')
-//        console.log(marked("### hello"))
-//        $("#post-content").html('<h3 id="hello">hello</h3>');
     })
 </script>
 </html>
