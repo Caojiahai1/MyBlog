@@ -1,5 +1,6 @@
 package com.site.blog.my.core.util;
 
+import com.vladsch.flexmark.ext.tables.TablesExtension;
 import com.vladsch.flexmark.ext.toc.TocBlock;
 import com.vladsch.flexmark.ext.toc.TocExtension;
 import com.vladsch.flexmark.ext.toc.internal.TocNodeRenderer;
@@ -39,7 +40,8 @@ public class MarkDownUtil {
 
          DataHolder OPTIONS = new MutableDataSet().set(Parser.EXTENSIONS, Arrays.asList(
                 TocExtension.create(),
-                CustomExtension.create()
+                CustomExtension.create(),
+                 TablesExtension.create()
         ));
 
         // uncomment to set optional extensions

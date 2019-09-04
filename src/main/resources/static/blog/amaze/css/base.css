@@ -3657,6 +3657,27 @@
  .article-trigger a {
    color: #5085ff;
  }
+
+.article-table{
+    margin: 0 auto;
+}
+.article-table th {
+    font-weight: bold;
+}
+
+.article-table th, .article-table td {
+    border: 1px solid #ccc;
+    padding: 6px 13px;
+}
+
+.article-table tr {
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.article-table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
  
  .topic-header {
    padding-bottom: 0px;
