@@ -3611,7 +3611,8 @@
  .article-trigger h2,
  .article-trigger h3,
  .article-trigger h4,
- .article-trigger h5 {
+ .article-trigger h5,
+ .article-trigger h6 {
    display: table;
    position: relative;
  }
@@ -3620,6 +3621,7 @@
  .article-trigger h2 a,
  .article-trigger h3 a,
  .article-trigger h4 a,
+ .article-trigger h5 a,
  .article-trigger h5 a {
    position: absolute;
    left: 0;
@@ -3629,30 +3631,64 @@
    display: block;
  }
  
- .article-trigger h2 {
-   padding-left: 1em;
- }
+ /*.article-trigger h2 {*/
+   /*padding-left: 1em;*/
+ /*}*/
 
- .article-trigger h3 {
-  padding-left: 1.5em;
-}
+ /*.article-trigger h3 {*/
+  /*padding-left: 1.5em;*/
+ /*}*/
 
+/*.article-trigger h4 {*/
+    /*padding-left: 2em;*/
+/*}*/
+ .article-trigger h1::before,
  .article-trigger h2::before,
- .article-trigger h3::before {
+ .article-trigger h3::before,
+ .article-trigger h4::before,
+ .article-trigger h5::before,
+ .article-trigger h6::before{
     position: absolute;
     left: 0;
     color: #337ab7;
  }
 
- .article-trigger h2::before {
-   font-weight: 600;
-   content: '#';
+.article-trigger h1{
+    font-size: 1.75em;
+    font-weight: 600;
+    /*content: '#';*/
+}
+
+ .article-trigger h2 {
+
+     font-size: 1.5em;
+     font-weight: 600;
+     /*content: '#';*/
  }
  
- .article-trigger h3::before {
-   font-weight: 500;
-   content: '##';
+ .article-trigger h3 {
+     font-size: 1.25em;
+     font-weight: 600;
+     /*content: '##';*/
  }
+
+.article-trigger h4 {
+    font-size: 1em;
+    font-weight: 600;
+    /*content: '###';*/
+}
+
+.article-trigger h5 {
+    font-size: 0.75em;
+    font-weight: 600;
+    /*content: '###';*/
+}
+
+.article-trigger h6 {
+    font-size: 0.5em;
+    font-weight: 600;
+    /*content: '###';*/
+}
 
  .article-trigger a {
    color: #5085ff;
