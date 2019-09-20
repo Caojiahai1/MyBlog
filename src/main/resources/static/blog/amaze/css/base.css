@@ -2214,7 +2214,8 @@
  .blog-footer {
    padding: 2rem 0 2rem 0;
    margin-top: 5rem;
-   background-color: #273547;
+   /*background-color: #273547;*/
+     background-color: #14191C;
    color: #fff !important
  }
  
