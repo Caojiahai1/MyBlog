@@ -21,6 +21,8 @@ public class BlogListVO implements Serializable {
 
     private String blogCategoryName;
 
+    private Long blogViews;
+
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date createTime;
 
@@ -86,5 +88,13 @@ public class BlogListVO implements Serializable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
+    }
+
+    public Long getBlogViews() {
+        return blogViews;
+    }
+
+    public void setBlogViews(Long blogViews) {
+        this.blogViews = blogViews;
     }
 }

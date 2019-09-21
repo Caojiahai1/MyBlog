@@ -79,10 +79,14 @@
             </div>
             <main class="sidebar-lists">
                 <ul>
-                    <li class="sidebar-list-item"><a class="tag tooltipped tooltipped-n" target="_blank"
-                                                     href="http://121.199.48.49/">lemochen.top
-                        <!--<th:block th:text="${hotBlog.blogTitle}"></th:block>-->
-                    </a></li>
+                    <th:block th:if="${null != friendLinks}">
+                        <th:block th:each="friendLink : ${friendLinks}">
+                            <li class="sidebar-list-item"><a class="tag tooltipped tooltipped-n" target="_blank"
+                                                             th:href="@{${friendLink.linkUrl}}">
+                                <th:block th:text="${friendLink.linkName}"></th:block>
+                            </a></li>
+                        </th:block>
+                    </th:block>
                 </ul>
             </main>
         </section>

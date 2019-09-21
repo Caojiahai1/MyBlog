@@ -19,15 +19,15 @@
                                                th:text="${configurations.get('yourName')}">13</a>
                                             <span class="in">in</span>
                                             <span class="category-name">
-                                <a class="category-name" rel="tag" th:href="@{'/category/' + ${blog.blogCategoryName}}"
-                                   th:utext="${blog.blogCategoryName}">
-                                    </a>
-                            </span>
+                                                <a class="category-name" rel="tag" th:href="@{'/category/' + ${blog.blogCategoryName}}"
+                                                   th:utext="${blog.blogCategoryName}">
+                                                </a>
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
                                 <span class="pull-right time pc_time"
-                                      th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')}">2019-01</span>
+                                      th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')} + '(' + ${blog.blogViews} + '浏览)'">2019-01</span>
                             </div>
                             <h1 class="post-index-title"><a itemtype="url" th:href="@{'/blog/' + ${blog.blogId}}">
                                 <th:block th:text="${blog.blogTitle}"></th:block>
@@ -38,8 +38,10 @@
                                     <img th:src="@{${blog.blogCoverImage}}" alt=""></a>
                             </div>
                             <div class="clearfix topic-footer">
-                                <span class="pull-left time mobile_time" th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')}">2018-01</span>
+                                <span class="pull-left time mobile_time"
+                                      th:text="${#dates.format(blog.createTime, 'yyyy-MM-dd')} + '(' + ${blog.blogViews} + '浏览)'">2018-01</span>
                             </div>
+                        </div>
                     </article>
                 </th:block>
             </th:block>

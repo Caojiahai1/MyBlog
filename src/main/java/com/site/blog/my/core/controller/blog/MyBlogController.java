@@ -69,6 +69,13 @@ public class MyBlogController {
         request.setAttribute("hotTags", tagService.getBlogTagCountForIndex());
         request.setAttribute("pageName", "首页");
         request.setAttribute("configurations", configService.getAllConfigs());
+        Map<Byte, List<BlogLink>> linkMap = linkService.getLinksForLinkPage();
+        if (linkMap != null) {
+            // 友情链接
+            if (linkMap.containsKey((byte) 0)) {
+                request.setAttribute("friendLinks", linkMap.get((byte) 0));
+            }
+        }
         return "blog/" + theme + "/index";
     }
 
