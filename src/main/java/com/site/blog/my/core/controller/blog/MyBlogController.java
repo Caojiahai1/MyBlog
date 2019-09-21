@@ -69,6 +69,11 @@ public class MyBlogController {
         request.setAttribute("hotTags", tagService.getBlogTagCountForIndex());
         request.setAttribute("pageName", "首页");
         request.setAttribute("configurations", configService.getAllConfigs());
+        setFriendLinks(request);
+        return "blog/" + theme + "/index";
+    }
+
+    private void setFriendLinks(HttpServletRequest request) {
         Map<Byte, List<BlogLink>> linkMap = linkService.getLinksForLinkPage();
         if (linkMap != null) {
             // 友情链接
@@ -76,7 +81,6 @@ public class MyBlogController {
                 request.setAttribute("friendLinks", linkMap.get((byte) 0));
             }
         }
-        return "blog/" + theme + "/index";
     }
 
     /**
@@ -136,6 +140,7 @@ public class MyBlogController {
         request.setAttribute("hotBlogs", blogService.getBlogListForIndexPage(0));
         request.setAttribute("hotTags", tagService.getBlogTagCountForIndex());
         request.setAttribute("configurations", configService.getAllConfigs());
+        setFriendLinks(request);
         return "blog/" + theme + "/list";
     }
 
@@ -165,6 +170,7 @@ public class MyBlogController {
         request.setAttribute("hotBlogs", blogService.getBlogListForIndexPage(0));
         request.setAttribute("hotTags", tagService.getBlogTagCountForIndex());
         request.setAttribute("configurations", configService.getAllConfigs());
+        setFriendLinks(request);
         return "blog/" + theme + "/list";
     }
 
@@ -194,6 +200,7 @@ public class MyBlogController {
         request.setAttribute("hotBlogs", blogService.getBlogListForIndexPage(0));
         request.setAttribute("hotTags", tagService.getBlogTagCountForIndex());
         request.setAttribute("configurations", configService.getAllConfigs());
+        setFriendLinks(request);
         return "blog/" + theme + "/list";
     }
 
