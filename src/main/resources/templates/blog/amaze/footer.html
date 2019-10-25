@@ -7,10 +7,12 @@
         Created by <span th:text="${configurations.get('footerPoweredBy')}"></span>&nbsp;&nbsp;
         <a th:href="${configurations.get('footerPoweredByURL')}" target="_blank" aria-label="view source code">
             <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
-        </a>
-        <!--ICP <a th:text="${configurations.get('footerICP')}">浙ICP备 xxxxxx-x号</a>-->
-        <!--<span class="ft-warn">&heartsuit;</span>-->
-        <!--Theme <a rel="friend" href="https://github.com/spiritree/typecho-theme-amaze" target="_blank"> Amaze</a> by <a href="https://github.com/spiritree" target="_blank">spiritree</a> & <a href="https://github.com/zjhch123" target="_blank">Jiahao.Zhang</a>-->
+        </a><br>
+        ICP <a target="_blank" href="http://www.beian.miit.gov.cn" th:text="${configurations.get('footerICP')}">浙ICP备 xxxxxx-x号</a>
+        &nbsp;
+        <span class="ft-warn"><img th:src="@{/admin/dist/img/beian.png}" /></span>
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32010202010680" th:text="${configurations.get('footerCopyRight')}"></a>
+<!--        Theme <a rel="friend" href="https://github.com/spiritree/typecho-theme-amaze" target="_blank"> Amaze</a> by <a href="https://github.com/spiritree" target="_blank">spiritree</a> & <a href="https://github.com/zjhch123" target="_blank">Jiahao.Zhang</a>-->
     </div>
 </footer>
 </html>
