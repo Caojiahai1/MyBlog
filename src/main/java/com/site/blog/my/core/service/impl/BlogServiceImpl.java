@@ -194,8 +194,8 @@ public class BlogServiceImpl implements BlogService {
     public PageResult getBlogsForIndexPage(int page) {
         Map params = new HashMap();
         params.put("page", page);
-        //每页8条
-        params.put("limit", 8);
+        //每页5条
+        params.put("limit", 5);
         params.put("blogStatus", 1);//过滤发布状态下的数据
         PageQueryUtil pageUtil = new PageQueryUtil(params);
         List<Blog> blogList = blogMapper.findBlogList(pageUtil);
