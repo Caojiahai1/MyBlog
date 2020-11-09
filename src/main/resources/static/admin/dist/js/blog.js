@@ -55,6 +55,26 @@ $(function () {
         }
     }
 
+    new AjaxUpload("#uploadCoverExcel", {
+        action: '/admin/upload/excel',
+        name: 'file',
+        autoSubmit: true,
+        responseType: "json",
+        onSubmit: function (file, extension) {
+            if (!(extension && /^(xlsx|xls)$/.test(extension.toLowerCase()))) {
+                alert('只支持xlsx、xls格式的文件！');
+                return false;
+            }
+        },
+        onComplete: function (file, r) {
+            if (r != null && r.resultCode == 200) {
+                alert("success");
+            } else {
+                alert("error");
+            }
+        }
+    });
+
 });
 
 /**
@@ -99,6 +119,10 @@ function editBlog() {
         return;
     }
     window.location.href = "/admin/blogs/edit/" + id;
+}
+
+function downloadExcel() {
+    window.location.href = "/admin//download/excel";
 }
 
 function deleteBlog() {

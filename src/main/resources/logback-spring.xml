@@ -40,7 +40,7 @@
     <logger name="com.zaxxer.hikari" level="ERROR"/>
 
     <!-- 日志输出级别 -->
-    <root level="DEBUG">
+    <root level="INFO">
     <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>
